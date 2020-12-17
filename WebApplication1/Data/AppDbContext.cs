@@ -10,6 +10,7 @@ namespace WebApplication1.Data
 {
     public partial class AppDbContext : IdentityDbContext<AppUser>
     {
+        public DbSet<TodoItem> TodoItems { get; set; }
         public AppDbContext(DbContextOptions options) : base(options)
         {
         }
